@@ -1,0 +1,322 @@
+/** 
+
+可以使用的变量列表:
+
+！！暂不支持，等待后续版本
+
+> 主菜单
+
+{{$menu.padding}}		横向padding
+
+{{$menu.height}}		高
+
+{{$menu.background}}	背景色
+
+{{$menu.backgroundO}}	背景色(焦点)
+
+{{$menu.color}}			前景色
+
+{{$menu.colorO}}		前景色(焦点)
+
+{{$menu.splitColor}}	分隔线色
+
+> 子菜单
+
+{{$menu.padding}}		横向padding
+
+{{$menu.height}}		高
+
+{{$menu.background}}	背景色
+
+{{$menu.backgroundO}}	背景色(焦点)
+
+{{$menu.color}}			前景色
+
+{{$menu.colorO}}		前景色(焦点)
+
+{{$menu.splitColor}}	分隔线色
+
+{{$subMenu.borderColor}}边框色
+
+**/
+
+
+
+/*字体和光标*/
+
+.cmDefaultMenu,.cmDefaultSubMenuTable
+
+{
+
+	cursor:			pointer;
+
+	font-family:	verdana, arial, sans-serif;
+
+	font-size:		13px;
+
+	padding:		0;
+
+	border:			0;
+
+
+
+	text-align:		left;
+
+}
+
+
+
+/*主菜单的背景 前景色*/
+
+.cmDefaultMenu,.cmDefaultMenu *
+
+{
+
+/*	color: red;*/
+
+}
+
+
+
+/*主菜单取得焦点的条目的背景色和文字颜色*/
+
+.cmDefaultMainItemHover,.cmDefaultMainItemActive
+
+{
+
+	color:		white;
+
+	background-color:	#FF9900;
+
+}
+
+
+
+/*子菜单主体边框 背景 前景色*/
+
+.cmDefaultSubMenuTable
+
+{
+
+/*	border:		1px solid #FFFFFF;*/
+
+	background-color:	#FF9900;
+
+	color: #333333;
+
+}
+
+
+
+
+
+/*子菜单取得焦点的条目的背景色和文字颜色*/
+
+.cmDefaultMenuItemHover,.cmDefaultMenuItemActive
+
+{
+
+	color:		white;
+
+	background-color:	#FFCE86;
+
+}
+
+
+
+
+
+/*菜单分隔条*/
+
+.cmDefaultMenuSplit
+
+{
+
+	height:		1px;
+
+	margin-top:	0px;
+
+	margin-bottom:	0px;
+
+	overflow:	hidden;
+
+	background-color:	inherit;
+
+	border-top:	1px solid #FFFFFF;
+
+}
+
+
+
+/*横向主菜单分隔条*/
+
+.cmDefaultMenuVSplit
+
+{
+
+	width:		1px;
+
+	margin:		1 0 1 0;
+
+	overflow:	hidden;
+
+	background-color:	#0099FF;
+
+	height:		16px;
+
+	border-right:	0px solid green;
+
+}
+
+
+
+/*
+
+主菜单的条目横向边距和高度设定
+
+注意不要试图设定padding-top和padding-buttom，它们不总是有效
+
+*/
+
+.cmDefaultMainItemText,.cmDefaultMainItemTextHover,.cmDefaultMainItemTextActive,
+
+.cmDefaultMainFolderText,.cmDefaultMainFolderTextHover,.cmDefaultMainFolderTextActive
+
+{
+
+ padding-left:1px;
+
+ padding-right:1px;
+
+ line-height: 26px;
+
+}
+
+/*
+
+子菜单的条目横向边距和高度设定
+
+*/
+
+.cmDefaultMenuItemText,.cmDefaultMenuItemTextHover,.cmDefaultMenuItemTextActive,
+
+.cmDefaultMenuFolderText,.cmDefaultMenuFolderTextHover,.cmDefaultMenuFolderTextActive
+
+{
+
+ padding-left:10px;
+
+ padding-right:10px;
+
+ line-height:22px;
+
+}
+
+
+
+
+
+/*不要修改以下内容，除非你清楚的知道你在做什么*/
+
+/*DO NOT modify the code under this line*/
+
+
+
+.cmDefaultSubMenu
+
+{
+
+	position:	absolute;
+
+	visibility:	hidden;
+
+
+
+	/*
+
+	   Netscape/Mozilla renders borders by increasing
+
+	   their z-index.  The following line is necessary
+
+	   to cover any borders underneath
+
+	*/
+
+	z-index:	100;
+
+	border:		0;
+
+	padding:	0;
+
+
+
+	filter:progid:DXImageTransform.Microsoft.Shadow(color=#848A84, Direction=135, Strength=4);
+
+}
+
+
+
+.cmDefaultSubMenuTable td
+
+{
+
+	white-space:	nowrap;
+
+}
+
+
+
+/* image shadow animation */
+
+
+
+/*
+
+	seq1:	image for normal
+
+	seq2:	image for hover and active
+
+
+
+	To use, in the icon field, input the following:
+
+	<img class="seq1" src="normal.gif" /><img class="seq2" src="hover.gif" />
+
+*/
+
+
+
+.cmDefaultMenuItem img.seq1
+
+{
+
+	display:	inline;
+
+}
+
+
+
+.cmDefaultMenuItemHover seq2,
+
+.cmDefaultMenuItemActive seq2
+
+{
+
+	display:	inline;
+
+}
+
+
+
+.cmDefaultMenuItem .seq2,
+
+.cmDefaultMenuItemHover .seq1,
+
+.cmDefaultMenuItemActive .seq1
+
+{
+
+	display:	none;
+
+}
+
